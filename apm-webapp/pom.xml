@@ -17,7 +17,8 @@
   ~
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>apm</artifactId>
         <groupId>org.apache.skywalking</groupId>
@@ -149,7 +150,7 @@
                     <workingDirectory>${ui.path}</workingDirectory>
                     <nodeVersion>v16.14.0</nodeVersion>
                 </configuration>
-                <executions>
+                <!--<executions>
                     <execution>
                         <id>install node and npm</id>
                         <goals>
@@ -162,7 +163,7 @@
                             <goal>npm</goal>
                         </goals>
                         <configuration>
-                            <arguments>install --registry=https://registry.npmjs.org/</arguments>
+                            <arguments>install &#45;&#45;registry=https://registry.npmjs.org/</arguments>
                         </configuration>
                     </execution>
                     <execution>
@@ -174,7 +175,7 @@
                             <arguments>run build</arguments>
                         </configuration>
                     </execution>
-                </executions>
+                </executions>-->
             </plugin>
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
