@@ -150,7 +150,6 @@
                     <workingDirectory>${ui.path}</workingDirectory>
                     <nodeVersion>v16.14.0</nodeVersion>
                 </configuration>
-                
                 <!--<executions>
                     <execution>
                         <id>install node and npm</id>
