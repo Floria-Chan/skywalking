@@ -24,7 +24,8 @@
         </Console>
     </Appenders>
     <Loggers>
-        <Root level="DEBUG">
+        <!-- floria -->
+        <Root level="INFO">
             <AppenderRef ref="Console"/>
         </Root>
     </Loggers>
