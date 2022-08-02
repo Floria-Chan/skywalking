@@ -118,10 +118,10 @@ core:
     # Turn it on then automatically grouping endpoint by the given OpenAPI definitions.
     enableEndpointNameGroupingByOpenapi: ${SW_CORE_ENABLE_ENDPOINT_NAME_GROUPING_BY_OPAENAPI:true}
 storage:
-  selector: ${SW_STORAGE:h2}
+  selector: ${SW_STORAGE:elasticsearch}
   elasticsearch:
     namespace: ${SW_NAMESPACE:""}
-    clusterNodes: ${SW_STORAGE_ES_CLUSTER_NODES:localhost:9200}
+    clusterNodes: ${SW_STORAGE_ES_CLUSTER_NODES:81.68.193.125:9200}
     protocol: ${SW_STORAGE_ES_HTTP_PROTOCOL:"http"}
     connectTimeout: ${SW_STORAGE_ES_CONNECT_TIMEOUT:500}
     socketTimeout: ${SW_STORAGE_ES_SOCKET_TIMEOUT:30000}

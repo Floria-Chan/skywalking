@@ -35,9 +35,9 @@ core:
     gRPCHost: grpc.skywalking.apache.org
     gRPCPort: ${GRPC_PORT:11800}
     downsampling:
-    - Hour
-    - Day
-    - Month
+      - Hour
+      - Day
+      - Month
     # Set a timeout on metrics data. After the timeout has expired, the metrics data will automatically be deleted.
     recordDataTTL: ${RECORD_DATA_TTL:90} # Unit is minute
     minuteMetricsDataTTL: ${MINUTE_METRIC_DATA_TTL:90} # Unit is minute
@@ -48,7 +48,7 @@ core:
 storage:
   selector: ${SW_STORAGE:elasticsearch}
   elasticsearch:
-    clusterNodes: ${ES_CLUSTER_ADDRESS:localhost:9200}
+    clusterNodes: ${ES_CLUSTER_ADDRESS:81.68.193.125:9200}
     indexShardsNumber: ${ES_INDEX_SHARDS_NUMBER:2}
     indexReplicasNumber: ${ES_INDEX_REPLICAS_NUMBER:0}
     # Batch process setting, refer to https://www.elastic.co/guide/en/elasticsearch/client/java-api/5.5/java-docs-bulk-processor.html
