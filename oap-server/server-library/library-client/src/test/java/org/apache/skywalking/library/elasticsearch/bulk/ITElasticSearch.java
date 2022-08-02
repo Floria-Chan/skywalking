@@ -28,6 +28,7 @@ import java.util.function.Function;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.skywalking.apm.util.StringUtil;
+import org.apache.skywalking.library.elasticsearch.requests.search.BoolQueryBuilder;
 import org.apache.skywalking.library.elasticsearch.requests.search.Query;
 import org.apache.skywalking.library.elasticsearch.requests.search.Search;
 import org.apache.skywalking.library.elasticsearch.requests.search.SearchBuilder;
@@ -70,14 +71,14 @@ public class ITElasticSearch {
 
     @Before
     public void before() throws Exception {
-        server = new ElasticsearchContainer(
+        /*server = new ElasticsearchContainer(
             DockerImageName.parse("docker.elastic.co/elasticsearch/elasticsearch-oss")
                            .withTag(version)
         );
-        server.start();
+        server.start();*/
 
         client = new ElasticSearchClient(
-            server.getHttpHostAddress(),
+            "81.68.193.125:9200",
             "http", "", "", "test", "test",
             indexNameConverter(namespace), 500, 6000,
             0
@@ -89,6 +90,12 @@ public class ITElasticSearch {
     public void after() throws IOException {
         client.shutdown();
         server.stop();
+    }
+
+    @Test
+    public void search(){
+        final BoolQueryBuilder query = Query.bool();
+        //query.must()
     }
 
     @Test
